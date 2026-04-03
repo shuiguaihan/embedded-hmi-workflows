@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "logs_dir": "project_ai/build-deploy-runs",
+  "secrets_file": "project_ai/build-deploy.secrets.local.json",
+  "build": {
+    "working_dir": ".",
+    "command": "make -j4",
+    "artifact_path": "build/output/app.bin",
+    "env": {
+      "BUILD_MODE": "release"
+    },
+    "host": {
+      "kind": "local"
+    }
+  },
+  "deploy": {
+    "local_artifact": "build/output/app.bin",
+    "target": {
+      "kind": "ssh",
+      "host": "board-host.example",
+      "port": 22,
+      "user": "root",
+      "auth_mode": "key",
+      "key_path": "/path/to/private_key"
+    },
+    "copy": {
+      "remote_tmp_path": "/tmp/app.bin.new",
+      "remote_final_path": "/opt/app/app.bin"
+    },
+    "backup": {
+      "enabled": false
+    },
+    "restart": {
+      "command": "systemctl restart app"
+    },
+    "health_checks": [
+      "pgrep -f app"
+    ],
+    "timeouts": {
+      "startup_timeout_seconds": 30,
+      "health_poll_interval_seconds": 2
+    }
+  }
+}

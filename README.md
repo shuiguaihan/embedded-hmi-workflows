@@ -1,5 +1,7 @@
 # embedded-hmi-workflows
 
+[中文说明](README.zh-CN.md)
+
 面向嵌入式显示器开发的工作流。
 
 Lightweight workflow skills for embedded display and HMI development.
@@ -63,6 +65,7 @@ Notes:
 - `build-deploy.skill.yaml` is intended to be checked in when the team wants a reusable workflow entrypoint.
 - `build-deploy.secrets.local.json` is local-only and must stay out of git.
 - The scripts also support passing an explicit `--config` path.
+- This repository ships a minimal starter template at `project_ai/build-deploy.skill.example.yaml`.
 
 ### Handoff modes
 
