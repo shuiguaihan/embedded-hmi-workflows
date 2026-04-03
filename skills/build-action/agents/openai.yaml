@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Action"
+  short_description: "Run project-configured build commands and capture logs."
+  default_prompt: "Use this skill to execute a configured project build action from a local config file."

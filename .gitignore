@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pyo
+*.log
+project_ai/build-deploy-runs/
+project_ai/build-deploy.secrets.local.json

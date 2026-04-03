@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Handoff"
+  short_description: "Refresh the canonical handoff or current surface"
+  default_prompt: "Use $write-handoff to refresh the project's canonical handoff or current surface."

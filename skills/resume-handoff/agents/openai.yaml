@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Handoff"
+  short_description: "Resume from the canonical resume surface first"
+  default_prompt: "Use $resume-handoff to continue from the project's canonical resume surface."

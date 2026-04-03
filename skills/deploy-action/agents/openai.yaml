@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deploy Action"
+  short_description: "Run project-configured deploy actions and capture logs."
+  default_prompt: "Use this skill to execute a configured project deploy action from a local config file."
